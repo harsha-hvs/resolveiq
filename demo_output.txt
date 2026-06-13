@@ -1,0 +1,17 @@
+=== INPUT THREAD ===
+[QUESTION] I compiled Nginx from sources. In the configuration file, I set up Nginx to be ran as nobody user. However, the output of ps aux shows master process running as root and worker process as nobody. Is this correct behavior?
+
+=== RESOLVEIQ SFT OUTPUT ===
+## Issue Summary
+The Nginx configuration was set up to run as the "nobody" user, but the master process is still running as the root user.
+
+## Root Cause
+The master process needs to bind to the privileged port 80, which requires root privileges, while the worker processes can handle actual HTTP requests and drop privileges to the "nobody" user.
+
+## Resolution Steps
+1. The current configuration is correct and intended to work this way.
+2. The master process binds to port 80 as root, while the worker processes handle requests and drop privileges to "nobody".
+3. Web documents and directories need to be accessible by the "nobody" user.
+
+## Prevention and Action Items
+No action is required as the configuration is correct and intended to work this way. However, ensure that web documents and directories are accessible by the "nobody" user to prevent any potential issues.

@@ -1,0 +1,2 @@
+SFT run: https://wandb.ai/hsures-university-of-washington/huggingface/runs/k9aodm50
+DPO run: https://wandb.ai/hsures-university-of-washington/huggingface/runs/cqmkwxjp

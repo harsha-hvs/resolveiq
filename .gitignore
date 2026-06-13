@@ -1,0 +1,10 @@
+checkpoints/
+data/*.jsonl
+data/Posts.xml
+data/*.7z
+data/*.xml
+wandb/
+logs/
+__pycache__/
+*.pyc
+.env

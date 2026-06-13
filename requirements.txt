@@ -1,0 +1,11 @@
+transformers>=4.56.2
+peft==0.14.0
+trl==1.1.0
+bitsandbytes==0.44.1
+together
+bert-score==0.3.13a
+datasets>=4.7.0
+accelerate>=1.4.0
+wandb
+sentencepiece
+torch>=2.1.0
